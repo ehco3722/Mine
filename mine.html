@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>js扫雷</title>
+  <style>
+      font{width:28px; height:28px; line-height:28px; background-color:silver; border: 2px outset; text-align:center; cursor:pointer; float:left;}
+      .space{border:2px silver solid; color:silver;}
+  </style>
+</head>
+<body onload="Interface(8,6);">
+
+
+  <div class= "mine-wrap">
+    <label>剩余雷数：<span id="markFrame"></span></label>
+    <label>级别：
+      <select id="mine-level" onchange="selectLevel(this.value);">
+        <option value="1">初级</option>
+        <option value="2">中级</option>
+        <option value="3">高级</option>
+      </select>
+    </label>
+    <div id="mine-game"></div>
+  </div>
+
+
+
+
+<script type="text/javascript">
+ document.oncontextmenu=function(){   
+  event.returnValue=false   
+  }   
+</script>
+<script src="mine.js"></script>
+
+</body>
+</html>
+
